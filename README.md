@@ -1,4 +1,4 @@
-[user]: research-ai-templates
+[user]: BMDS-ETH
 [repo]: SpineSegDiff 
 
 [issues-shield]: https://img.shields.io/github/issues/BMDS-ETH/SpineSegDiffnnUnet
@@ -7,6 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Issues][issues-shield]][issues-url]
 
+webpage under address [GITHUB_USERNAME.github.io/REPO_NAME](GITHUB_USERNAME.github.io/REPO_NAME)
 <div align="center">
 
 <h1 align="center"> Diffusion Models for Lumbar Spine Segmentation: SpineSegDiff </h1>
@@ -17,11 +18,10 @@
     <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.comBMDS-ETH/SpineSegDiffnnUnet">View Demo</a>
+    <a href="(BMDS-ETH.github.io/SpineSegDiffnnUnet">Project Info</a>
     ·
     <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues">Report Bug</a>
     ·
-    <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues">Request Feature</a>
   </p>
 </div>
 
