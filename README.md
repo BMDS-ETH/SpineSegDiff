@@ -1,6 +1,4 @@
-# Diffusion Models for Lumbar Spine Segmentation
 
-## 📋 Project Overview
 
 [user]: research-ai-templates
 [repo]: SpineSegDiffnnUnet
@@ -13,7 +11,7 @@
 
 <div align="center">
 
-<h1 align="center">Biomedical Imaging Template</h1>
+<h1 align="center"Diffusion Models for Lumbar Spine Segmentation: SpineSegDiff</h1>
 
   <p align="center">
     [TEMPLATE DESCRIPTION]
@@ -58,8 +56,9 @@
 </details>
 
 
-## About The Project
+# Diffusion Models for Lumbar Spine Segmentation
 
+## 📋 Project Overview
 
 
 
