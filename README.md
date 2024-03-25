@@ -189,9 +189,9 @@ Distributed under the Apache License Version 2.0, License. See `LICENSE` for mor
 <!-- CONTACT -->
 ## Contact
 
-Maria Monzon - email@email_client.com
+Maria Monzon - [Emai Me]( maria.monzonronda@hest.ethz.ch)
 
-Project Link: [https://github.com/research-ai-templates/biomedical-imaging-nn-template](https://github.com/research-ai-templates/biomedical-imaging-nn-template)
+[Github Link]( https://github.com/BMDS-ETH/SpineSegDif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
