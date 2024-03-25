@@ -1,7 +1,5 @@
-
-
 [user]: research-ai-templates
-[repo]: SpineSegDiffnnUnet
+[repo]: SpineSegDiff 
 
 [issues-shield]: https://img.shields.io/github/issues/BMDS-ETH/SpineSegDiffnnUnet
 [issues-url]: https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues
@@ -11,7 +9,7 @@
 
 <div align="center">
 
-<h1 align="center"Diffusion Models for Lumbar Spine Segmentation: SpineSegDiff</h1>
+<h1 align="center"> Diffusion Models for Lumbar Spine Segmentation: SpineSegDiff </h1>
 
   <p align="center">
     [TEMPLATE DESCRIPTION]
@@ -56,11 +54,10 @@
 </details>
 
 
-# Diffusion Models for Lumbar Spine Segmentation
 
 ## 📋 Project Overview
 
-
+Welcome to an automated Segmentation-Tool for multi modal Magnetic Resonance Images. The goal is to generate multiclass segmentations of T1-weighted and T2-weighted scans. The SPIDER Dataset is used for training the models.
 
 ### Project Organization
 
