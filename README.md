@@ -6,7 +6,9 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Issues][issues-shield]][issues-url]
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fbmds-eth.github.io%2FSpineSegDiff%2F)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fbmds-eth.github.io%2FSpineSegDiff%2F)](https://bmds-eth.github.io/SpineSegDiff/)
+
+
 
 <div align="center">
 
@@ -18,7 +20,7 @@
     <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="(bmds-eth.github.io/SpineSegDiffnnUnet">Project Info</a>
+    <a href="https://bmds-eth.github.io/SpineSegDiff/">Project Info</a>
     ·
     <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues">Report Bug</a>
     ·
