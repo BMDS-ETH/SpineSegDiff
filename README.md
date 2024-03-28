@@ -6,11 +6,11 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Issues][issues-shield]][issues-url]
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fbmds-eth.github.io%2FSpineSegDiff%2F)
 
-webpage under address [GITHUB_USERNAME.github.io/REPO_NAME](GITHUB_USERNAME.github.io/REPO_NAME)
 <div align="center">
 
-<h1 align="center"> Diffusion Models for Lumbar Spine Segmentation: SpineSegDiff </h1>
+<h1 align="center"> Diffusion Models for Lumbar Spine Segmentation: SpineSegDiff</h1>
 
   <p align="center">
     [TEMPLATE DESCRIPTION]
@@ -18,7 +18,7 @@ webpage under address [GITHUB_USERNAME.github.io/REPO_NAME](GITHUB_USERNAME.gith
     <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="(BMDS-ETH.github.io/SpineSegDiffnnUnet">Project Info</a>
+    <a href="(bmds-eth.github.io/SpineSegDiffnnUnet">Project Info</a>
     ·
     <a href="https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues">Report Bug</a>
     ·
