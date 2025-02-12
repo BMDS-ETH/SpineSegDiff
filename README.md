@@ -21,34 +21,47 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#-project-overview">Project Overview</a>
+    </li>
+    <li>
+      <a href="#installation">Installation</a>
+    </li>
+    <li>
+      <a href="#how-to-train-the-model">How to Train the Model</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#detailed-command-line-args">Command Line Arguments</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#inference-spinesegdiff">Inference SpineSegDiff</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#results">Results</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#project-organization">Project Organization</a>
+    </li>
+    <li>
+      <a href="#minimum-requirements">Minimum Requirements</a>
+    </li>
+    <li>
+      <a href="#license">License</a>
+    </li>
+    <li>
+      <a href="#acknowledgments">Acknowledgments</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
   </ol>
 </details>
 
+<a name="readme-top"></a>
 
 ## 📋 Project Overview
 
@@ -68,6 +81,7 @@ The dataset should be organized as follows:
           ...
       splits_final.json
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Installation
 
@@ -92,24 +106,21 @@ To train the SpineSegDiff model, run the following command:
 ```sh
 python src/train.py --data_dir /path/to/data --logdir /path/to/logdir --num_classes 4 --timesteps 1000
 ```
+The detailed command line args are:
+```
+-d, --data_dir str "./data/Dataset_SPIDER_T2w" # Dataset path
+-l, --logdir str "./results/SpinsegDiff-T2w/fold_0" # Log directory
+-b, --batch_size int 4 # Batch size
+-e, --epochs int 1500 # Number of epochs
+-c, --num_classes int 4 # Segmentation classes
+-t, --timesteps int 1000 # Diffusion timesteps
+-v, --val_every int 50 # Validation frequency
+-vs, --val_start int 200 # Start validation at iteration
+-f, --fold int 0 # Cross-validation fold
+-p, --presegmentation bool False # Enable presegmentation
+```
 
-
-| Flag | Long Flag | Type | Default | Description |
-|------|-----------|------|---------|-------------|
-| `-d` | `--data_dir` | str | `./data/Dataset_SPIDER_T2w` | Path to the SPIDER T2w dataset directory |
-| `-b` | `--batch_size` | int | 4 | Number of samples per training batch |
-| `-v` | `--val_every` | int | 50 | Validation frequency (in iterations) |
-| `-vs` | `--val_start` | int | 200 | Iteration number to start validation |
-| `-c` | `--num_classes` | int | 4 | Number of segmentation classes |
-| `-l` | `--logdir` | str | `./results/SpinsegDiff-T2w/fold_0` | Directory for saving logs and results |
-| `-t` | `--timesteps` | int | 1000 | Number of diffusion timesteps |
-| `-f` | `--fold` | int | 0 | Cross-validation fold number |
-| `-p` | `--presegmentation` | bool | False | Enable presegmentation strategy |
-| `-e` | `--epochs` | int | 1500 | Number of training epochs |
-
-
-### Inference
-
+### Inference SpineSegDiff
 
 <p align="center">
   <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="600">
@@ -124,23 +135,21 @@ WEIGTHS_PATH="./models/LumbarSpineSegDiff/${DATASET}/fold-${F}"
 RESULTS_PATH="./results/LumbarSpineSegDiff/S15-Ts${TS}/${DATASET}/fold-${F}"
 python src/test.py -d "./data/${DATASET}" -c 4  --fold "${F}" -e 15 -ts ${TS} -w ${WEIGTHS_PATH} -sp "$RESULTS_PATH/outputs" 
 ```
-
-### Command Line Arguments
-
-| Flag | Long Flag | Type | Default                       | Description |
-|------|-----------|------|-------------------------------|-------------|
-| `-d` | `--data_dir` | str | `./data/SPIDER_T2w`           | Dataset directory path |
-| `-dev` | `--device` | str | `cuda:0`                      | Computing device (GPU/CPU) |
-| `-c` | `--num_classes` | int | 4                             | Number of segmentation classes |
-| `-w` | `--weights_dir` | str | `./models/.../fold-0/`        | Model weights directory |
-| `-f` | `--fold` | int | 0                             | Cross-validation fold |
-| `-p` | `--presegmentation` | flag | False                         | Enable presegmentation |
-| `-e` | `--num_ensemble` | int | 5                             | Number of ensemble predictions |
-| `-ts` | `--timsteps_sample` | int | 15                            | Sampling timesteps |
-| `-t` | `--timesteps` | int | 1000                          | Total diffusion timesteps |
-| `-sp` | `--save_path` | str | `./results/.../visualization` | Output directory |
-
-### Example Usage
+The detailed command line args are: 
+```
+-d, --data_dir str "./data/SPIDER_T2w" # Dataset path
+-w, --weights_dir str "./models/.../fold-0/" # Model weights
+-sp, --save_path str "./results/.../visualization" # Output directory
+Model Configuration
+-dev, --device str "cuda:0" # Computing device
+-c, --num_classes int 4 # Number of classes
+-f, --fold int 0 # Cross-validation fold
+Diffusion Parameters
+-t, --timesteps int 1000 # Total timesteps
+-ts, --timsteps_sample int 15 # Sampling timesteps
+-e, --num_ensemble int 5 # Ensemble predictions
+-p, --presegmentation flag False # Enable presegmentation
+```
 
 #### Results
 
@@ -195,15 +204,14 @@ The results of the inference will be saved in the specified `--save_path` direct
     └── requirements.txt   <- The requirements file for reproducing the analysis environment generated with `pip freeze > requirements.txt`
 
 --------
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Minimum requirements
 
-` - Python 3.8+
-  - PyTorch 1.8+
-  - MONAI
-  - OpenCV
-`
-
+* Python 3.8+ 
+* PyTorch 1.8+ 
+* MONAI 
+* OpenCV
 
 <!-- LICENSE -->
 ## License
