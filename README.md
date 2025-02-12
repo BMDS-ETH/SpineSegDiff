@@ -21,6 +21,13 @@
   </p>
 </div>
 
+
+<p align="center">
+  <img src="docs/assets/SpineSegDiff-architecture.svg" alt="Alt text" width="600">
+  <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="700">
+</p>
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -95,9 +102,7 @@ The dataset should be organized as follows:
 
 ###  How to train the model
 
-<p align="center">
-  <img src="docs/assets/SpineSegDiff-architecture.svg" alt="Alt text" width="600">
-</p>
+
 
 
 To train the SpineSegDiff model, run the following command:
@@ -121,10 +126,6 @@ The detailed command line args are:
 ```
 
 ### Inference SpineSegDiff
-
-<p align="center">
-  <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="600">
-</p>
 
 To perform inference using a trained SpineSegDiff model, run:
 
@@ -157,7 +158,7 @@ The results of the inference will be saved in the specified `--save_path` direct
 - Output segmentation masks
 - Uncertainty-based heatmaps
 - Dice score CSV file
-
+- 
 <p align="center">
   <img src="docs/assets/results-overview.png" alt="Alt text" width="600">
 </p>
