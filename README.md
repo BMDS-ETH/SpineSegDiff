@@ -155,11 +155,11 @@ The results of the inference will be saved in the specified `--save_path` direct
 - Output segmentation masks
 - Uncertainty-based heatmaps
 - Dice score CSV file
-- 
-<p align="center">
-  <img src="docs/assets/results-overview.png" alt="Alt text" width="600">
-</p>
-
+<div align="center">
+   <p align="center">
+     <img src="docs/assets/results-overview.png" alt="Alt text" width="600">
+   </p>
+</div >
 
 ### Project Organization
 
