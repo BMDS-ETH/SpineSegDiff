@@ -3,7 +3,7 @@
 export PYTHONPATH=$PYTHONPATH:$PWD
 contrast="T1wT2w"
 DATASET="SPIDER_${contrast}"
-
+F=0
 TS=10
 WEIGTHS_PATH="./models/LumbarSpineSegDiff/${DATASET}/fold-${F}"
 RESULTS_PATH="./results/LumbarSpineSegDiff/S15-Ts${TS}/${DATASET}/fold-${F}"

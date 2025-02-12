@@ -7,10 +7,10 @@ import numpy as np
 from typing import List, Tuple
 from monai.utils import set_determinism
 from src.dataset.DataloaderSPIDER import get_dataloader_SPIDER
-from src.evaluation.metric import dice
+from src.results.metric import dice
 from src.networks.LumbarSpineSegDiff import LumbarSpineSegDiffInference
 from monai.data import DataLoader
-from skimage.morphology import closing, remove_small_objects
+from skimage.morphology import remove_small_objects
 from scipy import ndimage as ndi
 
 import cv2
