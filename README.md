@@ -11,7 +11,6 @@
 
 
 <div align="center">
-
 <h1 align="center"> Diffusion Models for Lumbar Spine Segmentation</h1>
 
   <p align="center">
@@ -19,14 +18,12 @@
     ·
     <a href="https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation/-/issues">Report Bug</a>
   </p>
+
+   <p align="center">
+     <img src="docs/assets/SpineSegDiff-architecture.svg" alt="Alt text" width="600">
+     <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="700">
+   </p>
 </div>
-
-
-<p align="center">
-  <img src="docs/assets/SpineSegDiff-architecture.svg" alt="Alt text" width="600">
-  <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="700">
-</p>
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
