@@ -1,93 +1,233 @@
-# Diffusion Models for Lumbar Spine MRI Segmentation
+[user]: BMDS-ETH
+[repo]: SpineSegDiff 
+
+[issues-shield]: https://img.shields.io/github/issues/BMDS-ETH/SpineSegDiffnnUnet
+[issues-url]: https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Issues][issues-shield]][issues-url]
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fbmds-eth.github.io%2FSpineSegDiff%2F)](https://bmds-eth.github.io/SpineSegDiff/)
 
 
 
-## Getting started
+<div align="center">
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+<h1 align="center"> Diffusion Models for Lumbar Spine Segmentation</h1>
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+  <p align="center">
+    <a href="https://bmds-eth.github.io/SpineSegDiff/">Project Info</a>
+    ·
+    <a href="https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation/-/issues">Report Bug</a>
+  </p>
+</div>
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
-```
-cd existing_repo
-git remote add origin https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation.git
-git branch -M main
-git push -uf origin main
-```
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation/-/settings/integrations)
+## 📋 Project Overview
 
-## Collaborate with your team
+Welcome to an automated segmentation-tool for multi modal Magnetic Resonance Images. 
+The goal is to generate multiclass segmentations of T1-weighted and T2-weighted scans.
+The SPIDER Dataset is used for training the models.
+The dataset should be organized as follows:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+    /path/to/dataset/
+      imagesTr/
+          image_1.nii.gz
+          image_2.nii.gz
+          ...
+      labelsTr/
+          label_1.nii.gz
+          label_2.nii.gz
+          ...
+      splits_final.json
 
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+1. Clone the repository:
+    ```sh
+    git clone https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation.git
+    cd diffusion-models-for-lumbar-spine-mri-segmentation
+    pip install -r requirements.txt
+    ```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+###  How to train the model
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+<p align="center">
+  <img src="docs/assets/SpineSegDiff-architecture.svg" alt="Alt text" width="600">
+</p>
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+To train the SpineSegDiff model, run the following command:
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
 
+```sh
+python src/train.py --data_dir /path/to/data --logdir /path/to/logdir --num_classes 4 --timesteps 1000
+```
+
+
+| Flag | Long Flag | Type | Default | Description |
+|------|-----------|------|---------|-------------|
+| `-d` | `--data_dir` | str | `./data/Dataset_SPIDER_T2w` | Path to the SPIDER T2w dataset directory |
+| `-b` | `--batch_size` | int | 4 | Number of samples per training batch |
+| `-v` | `--val_every` | int | 50 | Validation frequency (in iterations) |
+| `-vs` | `--val_start` | int | 200 | Iteration number to start validation |
+| `-c` | `--num_classes` | int | 4 | Number of segmentation classes |
+| `-l` | `--logdir` | str | `./results/SpinsegDiff-T2w/fold_0` | Directory for saving logs and results |
+| `-t` | `--timesteps` | int | 1000 | Number of diffusion timesteps |
+| `-f` | `--fold` | int | 0 | Cross-validation fold number |
+| `-p` | `--presegmentation` | bool | False | Enable presegmentation strategy |
+| `-e` | `--epochs` | int | 1500 | Number of training epochs |
+
+
+### Inference
+
+
+<p align="center">
+  <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="600">
+</p>
+
+To perform inference using a trained SpineSegDiff model, run:
+
+```sh
+F=0 # Fold number
+TS=10 # Number of sampling timesteps
+WEIGTHS_PATH="./models/LumbarSpineSegDiff/${DATASET}/fold-${F}"
+RESULTS_PATH="./results/LumbarSpineSegDiff/S15-Ts${TS}/${DATASET}/fold-${F}"
+python src/test.py -d "./data/${DATASET}" -c 4  --fold "${F}" -e 15 -ts ${TS} -w ${WEIGTHS_PATH} -sp "$RESULTS_PATH/outputs" 
+```
+
+### Command Line Arguments
+
+| Flag | Long Flag | Type | Default                       | Description |
+|------|-----------|------|-------------------------------|-------------|
+| `-d` | `--data_dir` | str | `./data/SPIDER_T2w`           | Dataset directory path |
+| `-dev` | `--device` | str | `cuda:0`                      | Computing device (GPU/CPU) |
+| `-c` | `--num_classes` | int | 4                             | Number of segmentation classes |
+| `-w` | `--weights_dir` | str | `./models/.../fold-0/`        | Model weights directory |
+| `-f` | `--fold` | int | 0                             | Cross-validation fold |
+| `-p` | `--presegmentation` | flag | False                         | Enable presegmentation |
+| `-e` | `--num_ensemble` | int | 5                             | Number of ensemble predictions |
+| `-ts` | `--timsteps_sample` | int | 15                            | Sampling timesteps |
+| `-t` | `--timesteps` | int | 1000                          | Total diffusion timesteps |
+| `-sp` | `--save_path` | str | `./results/.../visualization` | Output directory |
+
+### Example Usage
+
+#### Results
+
+The results of the inference will be saved in the specified `--save_path` directory, including:
+- Output segmentation masks
+- Uncertainty-based heatmaps
+- Dice score CSV file
+
+<p align="center">
+  <img src="docs/assets/results-overview.png" alt="Alt text" width="600">
+</p>
+
+
+### Project Organization
+
+------------
+    ├── benchmark           <- The adapted code for benchmarking other approaches
+    ├── data                  
+    │   ├── raw             <- The original, immutable data dump.
+    │   ├── processed       <- The final, canonical data sets for training in Medical Datathon format
+    │       ├── SPIDER_T1w      <- SPIDER dataset for T1w images
+    │       ├── SPIDER_T1wT2w   <- SPIDER dataset for T1w+ T2w images
+    │       └── SPIDER_T2w      <- SPIDER dataset for T1w images
+    ├── models              <- Trained and serialized models or model summaries
+    │
+    ├── docs                <- Documentaiton assets, manuals, and all other explanatory materials.
+    │
+    ├── results             <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   ├── model           <- Generated graphics and figures to be used in reporting
+    │       ├── outputs     <- The final, canonical data sets for training in D.
+    │       └── mean_dice_semantic.csv           <- Relevant metrics after evaluating the model.
+    │
+    ├── src                <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes src a Python module
+    │   │
+    │   ├── dataset           <- Scripts to download or generate data
+    │   │   ├── __init__.py
+    │   │   └── SPIDER.py
+    │   ├── networks         <- Modules of models architectures
+    │   │   ├── SpineSegDiff.py
+    │   │   └── denoising_UNet.py
+    │   ├── results         <- Scripts to create results and oriented visualizations
+    │   │   ├── ...         
+    │   │   └── statistical_summary.py
+    │   │
+    │   └── training  <- Scripts to train models and related utils
+    │       ├── ... 
+    │       ├── trainer.py
+    │       └── utils.py
+    ├── LICENSE
+    ├── README.md          <- The top-level README for developers using this project.
+    └── requirements.txt   <- The requirements file for reproducing the analysis environment generated with `pip freeze > requirements.txt`
+
+--------
+
+### Minimum requirements
+
+` - Python 3.8+
+  - PyTorch 1.8+
+  - MONAI
+  - OpenCV
+`
+
+
+<!-- LICENSE -->
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Distributed under the Apache License Version 2.0, License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [SPIDER Dataset](https://zenodo.org/records/10159290) We gratefully acknowledge the SPIDER dataset (DOI: 10.1038/s41597-024-03090-w) provided by Radboudumc, Jeroen Bosch Hospital, Rijnstate Hospital, and Sint Maartenskliniek.  This comprehensive multi-center lumbar spine MRI dataset with reference segmentations has been instrumental in training and validating our models.
+* [MONAI Framework](https://monai.io) This project leverages the Medical Open Network for AI (MONAI), and  thank the MONAI community for their excellent tools and support.
+* [DiffUNet](https://github.com/ge-xing/Diff-UNet)  Our implementation builds upon the DiffUNet architecture (https://arxiv.org/pdf/2303.10326). We thank the authors for making their codebase publicly available, which served as a foundation for developing our diffusion-based segmentation approach.
+
+
+<!-- CONTACT -->
+## Contact
+
+Maria Monzon - PhD Student at ETH Zürich Biomedical Data Science Lab 
+[Email Me](maria.monzon@hest.ethz.ch)  
+[Github Profile](https://github.com/mariamonzon)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
