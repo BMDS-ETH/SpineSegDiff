@@ -1,0 +1,9 @@
+modality: 
+  - both
+datalist: "./data/nnUNet_raw/Dataset003_SPIDER/dataset.json"
+dataroot: "./data/nnUnet_raw/Dataset003_SPIDER"
+
+dataset_name_or_id: 3
+nnunet_preprocessed: "./data/nnUNet_preprocessed"
+nnunet_raw: "./data/nnUNet_raw"
+nnunet_results: "./data/nnUNet_trained_models"
