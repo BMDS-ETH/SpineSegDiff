@@ -96,15 +96,9 @@ The dataset should be organized as follows:
     pip install -r requirements.txt
     ```
 
-
 ###  How to train the model
 
-
-
-
 To train the SpineSegDiff model, run the following command:
-
-
 ```sh
 python src/train.py --data_dir /path/to/data --logdir /path/to/logdir --num_classes 4 --timesteps 1000
 ```
@@ -123,7 +117,6 @@ The detailed command line args are:
 ```
 
 ### Inference SpineSegDiff
-
 To perform inference using a trained SpineSegDiff model, run:
 
 ```sh
@@ -225,7 +218,6 @@ Distributed under the Apache License Version 2.0, License. See `LICENSE` for mor
 * [SPIDER Dataset](https://zenodo.org/records/10159290) We gratefully acknowledge the SPIDER dataset (DOI: 10.1038/s41597-024-03090-w) provided by Radboudumc, Jeroen Bosch Hospital, Rijnstate Hospital, and Sint Maartenskliniek.  This comprehensive multi-center lumbar spine MRI dataset with reference segmentations has been instrumental in training and validating our models.
 * [MONAI Framework](https://monai.io) This project leverages the Medical Open Network for AI (MONAI), and  thank the MONAI community for their excellent tools and support.
 * [DiffUNet](https://github.com/ge-xing/Diff-UNet)  Our implementation builds upon the DiffUNet architecture (https://arxiv.org/pdf/2303.10326). We thank the authors for making their codebase publicly available, which served as a foundation for developing our diffusion-based segmentation approach.
-
 
 <!-- CONTACT -->
 ## Contact
