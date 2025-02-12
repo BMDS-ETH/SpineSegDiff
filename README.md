@@ -25,6 +25,11 @@
    </p>
 </div>
 
+
+<a name="readme-top"></a>
+
+## 📋 Project Overview
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -64,11 +69,6 @@
     </li>
   </ol>
 </details>
-
-<a name="readme-top"></a>
-
-## 📋 Project Overview
-
 Welcome to an automated segmentation-tool for multi modal Magnetic Resonance Images. 
 The goal is to generate multiclass segmentations of T1-weighted and T2-weighted scans.
 The SPIDER Dataset is used for training the models.
