@@ -11,7 +11,7 @@ from src.networks import BasicUNetEncoder, DenoisingUNet
 from src.training.lr_scheduler import LinearWarmupCosineAnnealingLR
 from src.training.trainer import Trainer
 from src.training.utils import save_new_model_weights
-from src.evaluation.metric import dice
+from src.results.metric import dice
 
 
 def uncertainty_entropy(x: torch.Tensor) -> torch.Tensor:
