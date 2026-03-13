@@ -1,0 +1,54 @@
+data:
+  name: 'SPIDER'
+  url: "https://zenodo.org/record/8009680"
+  doi: "10.5281/zenodo.8009679"
+  info: "Multi-center lumbar spine MRI dataset with reference segmentations of vertebrae, intervertebral discs (IVDs), and spinal canal. The dataset includes 447 sagittal T1 and T2 MRI series from 218 studies of 218 patients with a history of low back pain.The data was collected from four different hospitals"
+  license: "CC BY-NC-SA 4.0"
+  download:
+    urls:
+      - "https://zenodo.org/record/8009680/files/images.zip?download=1"
+      - "https://zenodo.org/record/8009680/files/masks.zip?download=1"
+    checksum :
+    - "7a9fa44aac0c72e2937bdef62cff88db"
+    - "49861ff25a0108b3b69d0ce808ae51dc"
+    hash_type: "md5"
+  images_pattern: "/images/*[!_SPACE]"
+  labels_pattern: "/masks/*[!_SPACE]"
+  extension: '.mha'
+  modalities: [ "t1", "t2"]
+  labels: { "BG": 0,
+            "L5": 1,
+            "L4": 2,
+            "L3": 3,
+            "L2": 4,
+            "L1": 5,
+            "T12": 6,
+            "T11": 7,
+            "T10": 8,
+            "SC": 100,
+            "IVD-L5S": 201,
+            "IVD-L4L5": 202,
+            "IVD-L3L4": 203,
+            "IVD-L2L3": 204,
+            "IVD-L1L2": 205,
+            "IVD-T12L1": 206,
+            "IVD-T11T12": 207,
+            "IVD-T10T11": 208 }
+  cite:
+    - "@dataset{jasper_willem_van_der_graaf_2023_8009680,
+                author       = {Jasper Willem van der Graaf and
+                Miranda L. van Hooff and
+                Constantinus F. M. Buckens and
+                Matthieu Rutten and
+                Job L. C. van Susante and
+                Robert Jan Kroeze and
+                Marinus de Kleuver and
+                Bram van Ginneken and
+                Nikolas Lessmann},
+                title        = {{SPIDER - Lumbar spine segmentation in MR images: a
+                  dataset and a public benchmark}},
+                month        = jun,
+                year         = 2023,
+                publisher    = {Zenodo},
+                doi          = {10.5281/zenodo.8009680},
+                url          = {https://doi.org/10.5281/zenodo.8009680}}"

@@ -1,0 +1,3 @@
+name: SPIDER
+source_path: data/raw
+target_path: /Users/mmonzon/Projects/0-LBP/lumbar-spine-mri-diffusion-segmentation/data/processed/SPIDER

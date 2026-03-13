@@ -1,0 +1,15 @@
+{
+    "channel_names": {
+        "T1wT2w": "0"
+    },
+    "labels": {
+        "background": 0,
+        "SC": 1,
+        "Vertebrae": 2,
+        "IVD": 3
+    },
+    "numTraining": 408,
+    "file_ending": ".nii.gz",
+    "overwrite_image_reader_writer": "NibabelIO",
+    "name": "SPIDER_T1wT2w"
+}
