@@ -1,0 +1,11 @@
+@inproceedings{monzon2025spinesegdiff,
+  title     = {Enhancing Low Back Pain Assessment with Diffusion Models
+               for Lumbar Spine MRI Segmentation},
+  author    = {Monzon, Maria and Iff, Thomas and Konukoglu, Ender
+               and Jutzeler, Catherine R.},
+  booktitle = {Proceedings of Machine Learning Research},
+  volume    = {156},
+  pages     = {1--18},
+  year      = {2025},
+  note      = {MIDL 2025}
+}

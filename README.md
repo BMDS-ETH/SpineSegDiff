@@ -1,8 +1,8 @@
 [user]: BMDS-ETH
 [repo]: SpineSegDiff 
 
-[issues-shield]: https://img.shields.io/github/issues/BMDS-ETH/SpineSegDiffnnUnet
-[issues-url]: https://github.com/BMDS-ETH/SpineSegDiffnnUnet/issues
+[issues-shield]: https://img.shields.io/github/issues/BMDS-ETH/SpineSegDiff
+[issues-url]: https://github.com/BMDS-ETH/SpineSegDiff/issues
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Issues][issues-shield]][issues-url]
@@ -20,9 +20,12 @@
   </p>
 
    <p align="center">
-     <img src="docs/assets/SpineSegDiff-architecture.svg" alt="Alt text" width="600">
-     <img src="docs/assets/SpineSegDiff-inference.svg" alt="Alt text" width="700">
+     <img src="docs/resources/SpineSegDiff-architecture.svg" alt="SpineSegDiff architecture" width="600">
    </p>
+  <p align="center">
+     <img src="docs/resources/SpineSegDiff-inference.svg" alt="SpineSegDiff inference" width="600">
+   </p>
+
 </div>
 
 
@@ -150,7 +153,7 @@ The results of the inference will be saved in the specified `--save_path` direct
 - Dice score CSV file
 <div align="center">
    <p align="center">
-     <img src="docs/assets/results-overview.png" alt="Alt text" width="600">
+     <img src="docs/resources/results-overview.png" alt="SpineSegDiff results overview" width="600">
    </p>
 </div >
 
