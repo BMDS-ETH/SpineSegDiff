@@ -3,12 +3,32 @@
 
 <style type="text/css">
 	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-		font-weight:300;
-		font-size:18px;
+		font-family: 'Noto Sans', sans-serif;
+		font-weight: 100;
+		font-size: 16px;
+		line-height: 1.4;
+		color: #000;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		margin-left: auto;
 		margin-right: auto;
 		width: 1100px;
+	}
+
+	td, p, li {
+		font-weight: 100;
+	}
+
+	.fig-caption {
+		font-weight: 300;
+	}
+
+	.publication-title {
+		font-family: 'Google Sans', sans-serif;
+	}
+
+	.publication-authors {
+		font-family: 'Google Sans', sans-serif;
 	}
 
 	h1 {
@@ -112,7 +132,79 @@
 		height: 1px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
+
+	/* Publication link buttons (nerfies-style) */
+	.publication-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+		margin: 10px 0;
+	}
+	.link-block {
+		display: inline-block;
+	}
+	.pub-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		padding: 9px 20px;
+		background-color: #363636;
+		color: #fff !important;
+		border-radius: 9999px;
+		font-size: 16px;
+		font-weight: 400;
+		text-decoration: none !important;
+		transition: background-color 0.2s ease;
+		border: none;
+		cursor: pointer;
+	}
+	.pub-btn:hover {
+		background-color: #4a4a4a;
+		color: #fff !important;
+	}
+	.pub-btn .btn-icon {
+		display: inline-flex;
+		align-items: center;
+		font-size: 17px;
+	}
+
+	/* Footer */
+	.page-footer {
+		margin-top: 50px;
+		padding: 30px 20px;
+		background-color: #f5f5f5;
+		border-top: 1px solid #e0e0e0;
+		text-align: center;
+		font-size: 14px;
+		color: #555;
+	}
+	.page-footer .footer-icons {
+		margin-bottom: 12px;
+	}
+	.page-footer .footer-icon-link {
+		color: #363636;
+		margin: 0 10px;
+		font-size: 22px;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	.page-footer .footer-icon-link:hover {
+		color: #208799;
+	}
+	.page-footer p {
+		margin: 6px 0;
+		max-width: 700px;
+		display: inline-block;
+	}
 </style>
+
+<!-- Google Fonts (nerfies-style) -->
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans:wght@100;200;300;400&family=Castoro&display=swap" rel="stylesheet"/>
+<!-- Font Awesome for button icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<!-- Academicons for arXiv icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
 
 <html>
 <head>
@@ -125,66 +217,79 @@
 <body>
 <br>
 <center>
-	<span style="font-size:36px">Enhancing Low Back Pain Assessment with Diffusion Models<br>for Lumbar Spine MRI Segmentation</span>
+	<span class="publication-title" style="font-size:36px">Enhancing Low Back Pain Assessment with Diffusion Models<br>for Lumbar Spine MRI Segmentation</span>
 	<br><br>
-	<span style="font-size:18px; color:#555;">MIDL 2025 &nbsp;&middot;&nbsp; Proceedings of Machine Learning Research, vol. 156</span>
+	<span style="font-size:18px; color:#555; font-weight:400;">MIDL 2025 &nbsp;&middot;&nbsp; Proceedings of Machine Learning Research</span>
 	<br><br>
 	<table align=center width=800px>
 		<tr>
 			<td align=center width=200px>
 				<center>
-					<span style="font-size:22px"><a href="https://github.com/mariamonzon">Maria Monzon</a><sup>1,2 *</sup></span>
+					<span class="publication-authors" style="font-size:22px"><a href="https://github.com/mariamonzon">Maria Monzon</a><sup>1,2 *</sup></span>
 				</center>
 			</td>
 			<td align=center width=200px>
 				<center>
-					<span style="font-size:22px"><a href="mailto:thomas.iff@inf.ethz.ch">Thomas Iff</a><sup>1 *</sup></span>
+					<span class="publication-authors" style="font-size:22px"><a href="mailto:thomas.iff@inf.ethz.ch">Thomas Iff</a><sup>1 *</sup></span>
 				</center>
 			</td>
 			<td align=center width=200px>
 				<center>
-					<span style="font-size:22px"><a href="mailto:ender.konukoglu@vision.ee.ethz.ch">Ender Konukoglu</a><sup>3</sup></span>
+					<span class="publication-authors" style="font-size:22px"><a href="mailto:ender.konukoglu@vision.ee.ethz.ch">Ender Konukoglu</a><sup>3</sup></span>
 				</center>
 			</td>
 			<td align=center width=200px>
 				<center>
-					<span style="font-size:22px"><a href="mailto:catherine.jutzeler@hest.ethz.ch">Catherine R. Jutzeler</a><sup>1,2</sup></span>
+					<span class="publication-authors" style="font-size:22px"><a href="mailto:catherine.jutzeler@hest.ethz.ch">Catherine R. Jutzeler</a><sup>1,2</sup></span>
 				</center>
 			</td>
 		</tr>
 	</table>
 	<br>
-	<span style="font-size:14px; color:#777;">
+	<span style="font-size:14px; color:#777; font-weight:300;">
 		<sup>*</sup> Contributed equally &nbsp;&nbsp;
 		<sup>1</sup> Biomedical Data Science Lab, ETH Z&uuml;rich &nbsp;&nbsp;
 		<sup>2</sup> Swiss Institute of Bioinformatics (SIB) &nbsp;&nbsp;
 		<sup>3</sup> Computer Vision Lab, ETH Z&uuml;rich
 	</span>
 	<br><br>
-	<table align=center width=550px>
-		<tr>
-			<td align=center width=130px>
-				<center>
-					<span style="font-size:24px"><a href="https://openreview.net/pdf?id=LahvcrntPI">[Paper]</a></span>
-				</center>
-			</td>
-			<td align=center width=130px>
-				<center>
-					<span style="font-size:24px"><a href="https://openreview.net/pdf?id=LahvcrntPI">[arXiv]</a></span>
-				</center>
-			</td>
-			<td align=center width=130px>
-				<center>
-					<span style="font-size:24px"><a href="https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation">[Code]</a></span>
-				</center>
-			</td>
-			<td align=center width=160px>
-				<center>
-					<span style="font-size:24px"><a href="https://github.com/BMDS-ETH/SpineSegDiff/releases/latest">[Weights]</a></span>
-				</center>
-			</td>
-		</tr>
-	</table>
+
+	<!-- Publication link buttons -->
+	<div class="publication-links">
+		<span class="link-block">
+			<a href="https://openreview.net/pdf?id=LahvcrntPI" class="pub-btn">
+				<span class="btn-icon"><i class="fas fa-file-pdf"></i></span>
+				<span>Paper</span>
+			</a>
+		</span>
+		<span class="link-block">
+			<a href="https://arxiv.org/abs/2410.09751" class="pub-btn">
+				<span class="btn-icon"><i class="ai ai-arxiv"></i></span>
+				<span>arXiv</span>
+			</a>
+		</span>
+		<span class="link-block">
+			<a href="https://github.com/BMDS-ETH/SpineSegDiff" class="pub-btn">
+				<span class="btn-icon"><i class="fab fa-github"></i></span>
+				<span>Code</span>
+			</a>
+		</span>
+		<span class="link-block">
+			<a href="https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation" class="pub-btn">
+				<span class="btn-icon"><i class="fab fa-gitlab"></i></span>
+				<span>GitLab</span>
+			</a>
+		</span>
+		<span class="link-block">
+			<a href="https://github.com/BMDS-ETH/SpineSegDiff/releases/latest" class="pub-btn">
+				<span class="btn-icon"><i class="fas fa-database"></i></span>
+				<span>Weights</span>
+			</a>
+		</span>
+
+
+
+	</div>
 </center>
 
 <br>
@@ -202,7 +307,7 @@
 	<table align=center width=900px>
 		<tr>
 			<td align=center>
-				<span style="font-size:14px; color:#555;">
+				<span class="fig-caption" style="font-size:14px; color:#555;">
 					SpineSegDiff: a diffusion-based dual-encoder framework for semantic segmentation of lumbar
 					spine MRI into vertebral bodies (VB), intervertebral discs (IVD), and spinal canal (SC)
 					from T1- and T2-weighted scans, with uncertainty heatmaps for clinical reliability assessment.
@@ -268,7 +373,7 @@
 	<table align=center width=900px>
 		<tr>
 			<td>
-				<span style="font-size:14px; color:#555;">
+				<span class="fig-caption" style="font-size:14px; color:#555;">
 					<b>Fig. 1 &mdash; Architecture overview (top):</b> The MRI scan <b>y</b> is concatenated with
 					the partially noised mask and fed into the dual-encoder (image encoder IE + denoising UNet).
 					<b>Inference (bottom):</b> S=15 intermediate samples are generated via DDIM; the final
@@ -316,7 +421,7 @@
 	<table align=center width=900px>
 		<tr>
 			<td>
-				<span style="font-size:14px; color:#555;">
+				<span class="fig-caption" style="font-size:14px; color:#555;">
 					<b>Fig. 2 &mdash; Presegmentation training pipeline:</b> nnU-Net generates an initial mask
 					<b>x</b><sub>pre</sub> from the MRI input <b>y</b>, which is partially noised (cosine schedule)
 					to produce <b>x</b><sub>T</sub>. SpineSegDiff then learns to denoise back to the
@@ -327,15 +432,6 @@
 	</table>
 </center>
 
-<table align=center width=850px>
-	<tr>
-		<center>
-			<span style="font-size:24px">
-				&nbsp;<a href="https://gitlab.ethz.ch/BMDSlab/publications/low-back/diffusion-models-for-lumbar-spine-mri-segmentation">[Code (GitLab)]</a>
-			</span>
-		</center>
-	</tr>
-</table>
 <br>
 
 <hr>
@@ -354,7 +450,7 @@
 	<table align=center width=900px>
 		<tr>
 			<td>
-				<span style="font-size:14px; color:#555;">
+				<span class="fig-caption" style="font-size:14px; color:#555;">
 					Visual comparison on challenging pathological cases (Pfirmann grades 4&ndash;5, endplate
 					irregularities, disc narrowing). Columns: Original MRI, Ground-truth label, SpineSegDiff,
 					IISDM, Diff-UNet 2D, nnU-Net 2D, T1w Heatmap, T2w Heatmap.
@@ -381,7 +477,7 @@
 			<span style="font-size:14pt">
 				M. Monzon*, T. Iff*, E. Konukoglu, C. R. Jutzeler.<br>
 				<b>Enhancing Low Back Pain Assessment with Diffusion Models for Lumbar Spine MRI Segmentation.</b><br>
-				<i>Proceedings of Machine Learning Research</i>, vol. 156, pp. 1&ndash;18, 2025.<br>
+				<i>Proceedings of Machine Learning Research</i>, 2025.<br>
 				MIDL 2025 &nbsp;&middot;&nbsp; * Contributed equally<br>
 				(<a href="https://arxiv.org/abs/2410.09751">arXiv</a>)
 				<br><br>
@@ -413,14 +509,34 @@
 				provided by Radboudumc, Jeroen Bosch Hospital, Rijnstate Hospital, and Sint Maartenskliniek.
 				Our implementation builds upon <a href="https://monai.io">MONAI</a> and the
 				<a href="https://github.com/ge-xing/Diff-UNet">DiffUNet</a> codebase.
-				The project webpage template was originally made by
-				<a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and
-				<a href="http://richzhang.github.io/">Richard Zhang</a>.
 			</left>
 		</td>
 	</tr>
 </table>
 
 <br>
+
+<!-- Footer with CC BY-SA 4.0 license -->
+<footer class="page-footer">
+	<div class="footer-icons">
+		<a class="footer-icon-link" href="https://openreview.net/pdf?id=LahvcrntPI" title="Paper">
+			<i class="fas fa-file-pdf"></i>
+		</a>
+		<a class="footer-icon-link" href="https://github.com/BMDS-ETH/SpineSegDiff" title="GitHub">
+			<i class="fab fa-github"></i>
+		</a>
+	</div>
+	<p>
+		This website is licensed under a
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+		Attribution-ShareAlike 4.0 International License</a>.
+		The project webpage template was originally made by
+		<a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and
+		<a href="http://richzhang.github.io/">Richard Zhang</a> and further adapted from the
+		<a href="https://nerfies.github.io">Nerfies</a> project page.
+		You are free to borrow the <a href="https://github.com/BMDS-ETH/SpineSegDiff">source code</a>.
+	</p>
+</footer>
+
 </body>
 </html>
